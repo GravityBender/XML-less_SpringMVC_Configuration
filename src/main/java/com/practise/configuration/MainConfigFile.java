@@ -17,16 +17,6 @@ import org.springframework.web.servlet.view.JstlView;
 public class MainConfigFile implements WebMvcConfigurer {
 
     @Bean
-    public ViewResolver postViewResolver(){
-        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-        viewResolver.setViewClass(JstlView.class);
-        viewResolver.setPrefix("/WEB-INF/view/");
-        viewResolver.setSuffix(".jsp");
-
-        return viewResolver;
-    }
-
-    @Bean
     public ViewResolver getViewResolver(){
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
         viewResolver.setViewClass(JstlView.class);
